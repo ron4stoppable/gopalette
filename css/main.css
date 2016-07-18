@@ -1,0 +1,247 @@
+html, body {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+	width:100%;
+	height:100%;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    height: 95vh
+}
+
+
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0
+}
+
+a,a:active,a:visited {
+    color: #fff;
+    text-decoration: none
+}
+
+li {
+    list-style: none
+}
+
+
+.main-container {
+	width:100%;
+	height:100%;
+	margin: 0;
+	padding: 0;
+}
+
+.fitter{
+	height:1px;
+}
+
+.color-list {
+	display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+	width:100%;
+	height:100%;
+	margin: 0;
+	padding: 0;
+}
+
+@-webkit-keyframes come-in {
+  0%   { width:0%; }
+  100% { width:100%; }
+}
+@-moz-keyframes come-in {
+  0%   { width:0%; }
+  100% { width:100%; }
+}
+@-o-keyframes come-in {
+  0%   { width:0%; }
+  100% { width:100%; }
+}
+@keyframes come-in {
+  0%   { width:0%; }
+  100% { width:100%; }
+}
+
+
+
+.color {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: relative;
+width:100%;
+	
+-webkit-animation: come-in 2s ; /* Safari 4+ */
+  -moz-animation:    come-in 2s ; /* Fx 5+ */
+  -o-animation:      come-in 2s ; /* Opera 12+ */
+  animation:         come-in 2s ; /* IE 10+, Fx 29+ */
+  
+      -webkit-transition: background-color 0.4s ease;
+    -moz-transition: background-color 0.4s ease;
+    -o-transition: background-color 0.4s ease;
+    transition: background-color 0.4s ease;
+
+}
+
+.color-container {
+    height: auto;
+    font-size: 30px;
+    position: relative;
+	
+  
+  
+}
+
+.color-code{
+	opacity: .7;
+    background: transparent;
+    border: none;
+    outline: none;
+    text-align: center;
+    -webkit-transition: opacity .25s ease-in-out;
+    transition: opacity .25s ease-in-out;
+    width: 100%;
+    z-index: 100;
+    position: relative;
+	
+	text-transform: uppercase;
+	font-weight: bold;
+	font-family: Verdana, Geneva, sans-serif;
+	-webkit-text-stroke: 1px black;
+  
+  /* If we weren't using text-shadow, we'd set a fallback color
+     and use this to set color instead
+    -webkit-text-fill-color: white; */
+  
+  color: white;
+  
+	text-shadow: 3px 3px 0 #000,
+    /* Simulated effect for Firefox and Opera
+       and nice enhancement for WebKit */
+   -1px -1px 0 #000,  
+    1px -1px 0 #000,
+   -1px  1px 0 #000,
+    1px  1px 0 #000;
+}
+
+
+.direction-block{
+	width: 60%;
+    float: left;
+}
+
+.direction{
+	display: inline-block;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+    border: 1px solid;
+    padding: 8px;
+	cursor: pointer;
+	width:10%;
+}
+
+.direction:hover{
+    border: 1px solid rgba(255,255,255,1);
+
+    background-color: #fff;
+	color: #000;
+	-webkit-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -moz-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  -o-transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+  transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1) 10ms;
+}
+
+.footer {
+	box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.15);
+	background-color: #232323;
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	color: #eee;
+	text-align:center;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	padding: 5px;
+
+	-webkit-transition: box-shadow 450ms;
+	-moz-transition: box-shadow 450ms;
+	-ms-transition: box-shadow 450ms;
+	-o-transition: box-shadow 450ms;
+	transition: box-shadow 450ms;
+}
+
+.footer:hover {
+	box-shadow: 0px 0px 0px 4px #F7931E;
+}
+
+.cite{
+	width: 20%;
+	float:left;
+	padding-top: 5px;
+}
+.author{
+	width: 20%;
+	float:right;
+	padding-top: 5px;
+}
+
+.saver{
+	position: fixed;
+    z-index: 10;
+    float: right;
+    top: 5%;
+    right: 5%;
+    padding: 4px;
+    border: 1px solid #fff;
+	color: #fff;
+	cursor: pointer;
+}
+.saver:hover{
+    border: 1px solid rgba(255,255,255,1);
+    background-color: #fff;
+	color: #000;
+	-webkit-transition: all 200ms;
+  -moz-transition: all 200ms;
+  -o-transition: all 200ms;
+  transition: all 200ms;
+}

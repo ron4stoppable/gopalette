@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Pallet selector</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <!-- Place favicon.ico in the root directory -->
+
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+	
+	   <!--script src="https://code.jquery.com/jquery-1.12.0.min.js"></script-->
+    
+	<script>window.jQuery || document.write('<script src="js/jquery-1.12.0.min.js"><\/script>')</script>
+	 <script src="js/main.js"></script>
+	 
+	 <script>
+	 function down(){
+	 var a = document.body.appendChild(
+    document.createElement("a")
+);
+	a.download = "export.txt";
+	a.href = "data:text/plain;base64," + btoa(JSON.stringify(colArray));
+	a.innerHTML = "download example text";
+	}
+	 </script>
+	</head>
+    <body>
+	<div class="saver"><a href = "javascript=\"data:text/plain;base64,\"+btoa(JSON.stringify(colArray);">SAVE</a></div>
+    <div class="main-container">
+		<ul class="color-list">
+		<script> $c = "#"+get_color();
+				$colId++;
+				document.write("<li class=\"color\" style=\" background-color: " + $c + "; \">");
+				colArray = $c;
+		</script>
+			<div class="color-container">
+				<script>document.write("<input type=\"text\" class=\"color-code\" id="+$colId+ "  value="+$c+ ">");
+				</script>
+			</div>	
+			</li>
+		</ul>
+	</div>
+	
+
+   <div class="footer">
+		<div class="cite">
+			jQuery Clone of <a href="http://www.palettable.io/">Palettable.io</a>
+		
+		</div>
+		<div class="direction-block">
+					<div class="direction" id="dislike" onclick="keyDislike()">
+						<div class="key">D</div>
+						<div class="action">Dislike</div>
+					</div>
+					<div class="direction" id="space" onclick="keyChange()">
+						<div class="key">&lt;space&gt;</div>
+						<div class="action">Change</div>
+					</div>
+					<div class="direction" id="like" onclick="keyLike()">
+						<div class="key">L</div>
+						<div class="action">Like</div>
+					</div>
+		</div>
+		<div class="author">
+			<a href="https://twitter.com/rohanOnly">@rohanOnly</a><br>
+			&lt;/&gt; by <a href="http://www.rohanShewale.me">Rohan Shewale</a>
+		</div>
+   </div>
+
+
+       
+	<!--   <script src="js/plugins.js"></script> -->
+       
+
+        <!-- Google Analytics -->
+    </body>
+</html>
